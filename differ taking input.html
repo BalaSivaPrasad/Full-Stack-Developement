@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Different Ways of Taking Input</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+#outputDiv {
+background-color: #f0f0f0;
+padding: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 300px;
+margin-top: 20px;
+}
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+button:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<h1>Taking Input in HTML, CSS, and JavaScript</h1>
+
+<!-- 1. Input field (Text Input) -->
+<h2>1. Input Field (Text Input)</h2>
+<input type="text" id="textInput" placeholder="Enter some text">
+<button onclick="takeTextInput()">Submit Text Input</button>
+<div id="outputDiv"></div>
+
+<!-- 2. Prompt Box (JavaScript) -->
+<h2>2. Prompt Box (JavaScript)</h2>
+<button onclick="takePromptInput()">Submit via Prompt</button>
+
+<!-- 3. Dropdown Menu (Select) -->
+<h2>3. Dropdown Menu (Select)</h2>
+<select id="dropdownMenu">
+<option value="apple">Apple</option>
+<option value="banana">Banana</option>
+<option value="cherry">Cherry</option>
+</select>
+<button onclick="takeDropdownInput()">Submit Dropdown Selection</button>
+
+<!-- 4. Textarea (Multiline Input) -->
+<h2>4. Textarea (Multiline Input)</h2>
+<textarea id="textareaInput" rows="4" cols="50" placeholder="Enter some multiline text"></textarea><br>
+<button onclick="takeTextareaInput()">Submit Textarea Input</button>
+
+<script>
+function takeTextInput() {
+const textInput = document.getElementById("textInput").value;
+document.getElementById("outputDiv").innerHTML = `You entered: ${textInput}`;
+}
+function takePromptInput() {
+const promptInput = prompt("Please enter some text:");
+if (promptInput !== null) {
+alert(`You entered: ${promptInput}`);
+}
+}
+function takeDropdownInput() {
+const dropdown = document.getElementById("dropdownMenu");
+const selectedOption = dropdown.value;
+document.getElementById("outputDiv").innerHTML = `You selected: ${selectedOption}`;
+}
+function takeTextareaInput() {
+const textareaInput = document.getElementById("textareaInput").value;
+document.getElementById("outputDiv").innerHTML = `You entered (multiline):<br>${textareaInput}`;
+}
+</script>
+</body>
+</html>
