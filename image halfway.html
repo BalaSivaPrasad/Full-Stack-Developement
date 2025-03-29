@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Image Position</title>
+<style>
+body {
+height: 200vh; /* Makes the page scrollable */
+background-image: url('assets/background.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center 50%;
+background-attachment: fixed; /* Ensures the background stays in place */
+transform: scaleX(-1); /* Flips the image horizontally */
+}
+.content {
+text-align: center;
+font-size: 24px;
+margin-top: 50vh; /* Places content below the image */
+color: white;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+<div class="content">This text appears below the background image.</div>
+</body>
+</html>
