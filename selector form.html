@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Selectors</title>
+<style>
+h1 { color: blue; }
+#unique { color: green; }
+.group { font-style: italic; }
+div > p { color: red; } 
+div p { color: orange; } 
+a:hover { color: purple; }
+p::first-letter { font-size: 2em; color: brown; }
+input[type="text"] { border: 2px solid blue; }
+</style>
+</head>
+<body>
+<h1>Simple Selectors</h1>
+<p id="unique">This is an ID selector.</p>
+<p class="group">This is a class selector.</p>
+<div>
+<p>This is inside a div.</p>
+</div>
+<a href="#">Hover over me</a>
+<p>This paragraph demonstrates a pseudo-element.</p>
+<input type="text" placeholder="Attribute Selector Example">
+</body>
+</html>
