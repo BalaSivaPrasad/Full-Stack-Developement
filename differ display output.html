@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Different Ways of Displaying Output</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+#outputDiv {
+background-color: #f0f0f0;
+padding: 20px;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 300px;
+margin-top: 20px;
+}
+#consoleOutput {
+background-color: #333;
+color: white;
+padding: 10px;
+border-radius: 5px;
+font-family: monospace;
+margin-top: 20px;
+}
+button {
+padding: 10px 20px;
+background-color: #4CAF50;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+button:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<h1>Displaying Output in HTML, CSS, and JavaScript</h1>
+<h2>1. Direct Output in HTML</h2>
+<p>This is a simple static output directly in HTML:</p>
+<div id="staticOutput">
+<p>Static text displayed directly in HTML.</p>
+</div>
+<h2>2. Using JavaScript: Output in Console</h2>
+<p>Check the browser console for the next output:</p>
+<button onclick="displayConsoleMessage()">Display in Console</button>
+<h2>3. Using JavaScript: Dynamically Changing Content</h2>
+<p>Click the button below to change the content inside the div:</p>
+<button onclick="changeContent()">Change Content in Div</button>
+<div id="outputDiv">
+<p>This content will change when you click the button.</p>
+</div>
+<h2>4. Using JavaScript: Alert Box</h2>
+<p>Click the button below to show an alert box:</p>
+<button onclick="showAlert()">Show Alert</button>
+<h2>5. Displaying Console Output</h2>
+<div id="consoleOutput">
+<p>Look at your console for a custom message:</p>
+</div>
+<script>
+function displayConsoleMessage() {
+console.log("This is a message displayed in the console!");
+}
+function changeContent() {
+document.getElementById("outputDiv").innerHTML = "<p>The content has been changed dynamically!</p>";
+}
+function showAlert() {
+alert("This is an alert box!");
+}
+console.log("Page Loaded - Console output is here!");
+</script>
+</body>
+</html>
